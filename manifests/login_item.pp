@@ -3,7 +3,8 @@ class xlite::login_item($ensure = present) {
     'X-Lite':
       ensure  => $ensure,
       path    => '/Applications/X-Lite.app',
-      require => Package['X-Lite'];
+      require => Package['X-Lite'],
+      hidden  => true;
   }
 
   exec{
